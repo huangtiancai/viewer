@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viewer</title>
+  <script src="./js/viewer.min.js"></script>
+  <link rel="stylesheet" href="./style/viewer.min.css">
+</head>
+
+<style>
+  #images {
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    border: 1px solid wheat;
+    border-radius: 2px;
+    float: left;
+  }
+</style>
+
+<body>
+  <!-- a block container is required -->
+  <!-- <div>
+    <img id="image" src="images/javascript.jpg" width="50px" alt="Picture">
+  </div> -->
+
+  <div id="container">
+    <ul id="images">
+      <li><img src="images/js.png" width="50px" alt="Picture"></li>
+      <li><img src="images/vue-logo.png" width="50px" alt="Picture"></li>
+      <li><img src="images/webpack.png" width="50px" alt="Picture"></li>
+      <li><img src="images/html.png" width="50px" alt="Picture"></li>
+      <li><img src="images/css3.png" width="50px" alt="Picture"></li>
+      <li><img src="images/Node.png" width="50px" alt="Picture"></li>
+      <li><img src="images/sass.png" width="50px" alt="Picture"></li>
+      <li><img src="images/Babel.png" width="50px" alt="Picture"></li>
+      <li><img src="images/Element.png" width="50px" alt="Picture"></li>
+      <li><img src="images/JSON.png" width="50px" alt="Picture"></li>
+      <li><img src="images/Mongodb.png" width="50px" alt="Picture"></li>
+      <li><img src="images/Yarn.png" width="50px" alt="Picture"></li>
+      <li><img src="images/npm.png" width="50px" alt="Picture"></li>
+      <li><img src="images/NGINX.png" width="50px" alt="Picture"></li>
+    </ul>
+  </div>
+
+  <script>
+
+    // View an image
+    // const viewer = new Viewer(document.getElementById('image'), {
+
+    // });
+
+    // View a list of images
+    const gallery = new Viewer(document.getElementById('images'), {
+      inline: false,      // 默认false
+      button: true,       // 右上角按钮 默认 true
+      backdrop: true,     // 背景
+      transition: false,  // 是否有过渡效果 默认有过渡效果 - true
+      navbar: true,        // 显示缩略图导航
+      title: true,        // 显示当前图片的标题（现实 alt 属性及图片尺寸）
+      tooltip: true, 	    // 显示缩放百分比
+      movable: true, 	    // 图片是否可移动
+      zoomable: true, 	  // 图片是否可缩放 设置false 点击图片不会缩放
+      rotatable: true,   	// 图片是否可旋转
+      scalable: true,	    // 
+      zoomOnTouch: true,  // 是否能在触摸屏上通过拖拽的方式进行缩放
+      transition: true, 	// 使用 CSS3 过度
+      fullscreen: false, 	// 播放时是否全屏
+      keyboard: true, 	  // 是否支持键盘
+      interval: 1000,     // 播放间隔，单位为毫秒(仅仅在工具栏上控制播放时会定时切换图片)
+      loop: false,        // 是否循环
+      loading: true,      // Indicate if show a loading spinner when load image or not. 
+
+
+      // toolbar: true,   // 显示工具栏(控制播放缩放、旋转、翻转..)
+      // toolbar: {
+      //   // 详细配置
+      //   zoomIn: 4,
+      //   zoomOut: 4,
+      //   oneToOne: 4,
+      //   reset: 4,
+      //   prev: 4,
+      //   play: {
+      //     show: 4,
+      //     size: 'large',
+      //   },
+      //   next: 4,
+      //   rotateLeft: 4,
+      //   rotateRight: 4,
+      //   flipHorizontal: 4,
+      //   flipVertical: 4
+      // }
+    });
+  </script>
+</body>
+
+</html>
